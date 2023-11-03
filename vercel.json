@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "buildCommand": "npx frontity build"
   "builds": [
     {
       "src": "package.json",
