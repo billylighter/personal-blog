@@ -60,11 +60,6 @@ const Container = styled.header`
   box-shadow: var(--shadow-sm);
   transition: background-color 500ms;
 
-  .logo {
-    --margin-right: 2;
-    transform: translateY(4px);
-  }
-
   ${inMobile} {
     position: fixed;
     bottom: 0;

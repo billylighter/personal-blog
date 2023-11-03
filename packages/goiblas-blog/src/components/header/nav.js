@@ -14,7 +14,7 @@ const Nav = ({ state }) => (
 export default connect(Nav);
 
 const Container = styled.nav`
-    flex: 1 1 auto;
+    flex: 1 1 33.33%;
 `;
 
 const Item = styled(Link)`
