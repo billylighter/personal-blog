@@ -1,4 +1,6 @@
 import React from "react";
+import {styled} from "frontity";
+import {inDesktop} from "./media-queries";
 
 export const Logo = () => (
     <svg role="img" aria-label="Logo Goiblas" xmlns="http://www.w3.org/2000/svg" width="78.456" height="26.222"  viewBox="0 0 78.456 26.222">
@@ -77,3 +79,15 @@ export const Sun = () => (
       </g>
     </svg>
 )
+
+export const LogoName = ({state}) => (
+    <LogoNameWrapper>
+        {state.frontity.site_name}
+    </LogoNameWrapper>
+)
+
+const LogoNameWrapper = styled.div`
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.5rem;
+  font-weight: 700;
+`;

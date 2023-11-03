@@ -3,7 +3,7 @@ import { styled } from "frontity";
 
 const Loading = () => (
   <Container>
-    <p>Cargando ...</p>
+    <p>Шукаємо ...</p>
   </Container>
 );
 

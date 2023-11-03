@@ -11,9 +11,9 @@ const Footer = () => {
             </PowerBy>
             <Social>
                 Me puedes encontrar en:
-                <a className="link" rel="noopener noreferrer" href="https://twitter.com/goiblas" target="_blank">Twitter</a> 
-                <a className="link" rel="noopener noreferrer" href="https://github.com/goiblas" target="_blank">Github</a> 
-                <a className="link" rel="noopener noreferrer" href="https://codepen.io/goiblas/" target="_blank">Codepen</a>              
+                <a className="link" rel="noopener noreferrer" href="#!" target="_blank">Twitter</a>
+                <a className="link" rel="noopener noreferrer" href="#!" target="_blank">Github</a>
+                <a className="link" rel="noopener noreferrer" href="#!" target="_blank">Codepen</a>
             </Social>
         </Container>
     </FooterContainer>

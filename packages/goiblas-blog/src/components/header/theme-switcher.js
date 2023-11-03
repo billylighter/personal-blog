@@ -26,42 +26,50 @@ const ThemeSwitcher = ({ state, actions }) => {
     const isDarkMode = mode === 'dark';
 
     return (
-        <Switch aria-hidden="true" isDark={isDarkMode}>
-            {isDarkMode && <Global styles={darkmode} />}
-            <button onClick={ setLightMode } aria-pressed={ isDarkMode ? 'false' : 'true'}>
-                <Sun  />
-            </button>
-            <button onClick={ setDarkMode } aria-pressed={ isDarkMode ? 'true' : 'false'}>
-                <Moon />
-            </button>
-        </Switch>
+        <SwitchWrapper>
+            <Switch aria-hidden="true" isDark={isDarkMode}>
+                {isDarkMode && <Global styles={darkmode} />}
+                <button onClick={ setLightMode } aria-pressed={ isDarkMode ? 'false' : 'true'}>
+                    <Sun  />
+                </button>
+                <button onClick={ setDarkMode } aria-pressed={ isDarkMode ? 'true' : 'false'}>
+                    <Moon />
+                </button>
+            </Switch>
+        </SwitchWrapper>
     );
 };
 
 export default connect(ThemeSwitcher);
 
+const SwitchWrapper = styled.div`
+  flex: 0 1 33.33%;
+`;
+
 const Switch = styled.div`
-    overflow: hidden;
-    border-radius: 3px;
-    box-shadow: inset var(--color-border) 0 0 0 1px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 90px;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: inset var(--color-border) 0 0 0 1px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90px;
+  margin-left: auto;
 
-    button {
-        border: 0;
-        background-color: transparent;
-        height: 36px;
-        display: flex;
-        outline: 0;
+  button {
+    border: 0;
+    background-color: transparent;
+    height: 36px;
+    display: flex;
+    outline: 0;
 
-        svg {
-            margin: auto;
-            stroke: ${({ isDark }) => ( isDark ? '#fff' : '#111')};
-        }
-        &[aria-pressed="true"] {
-            background-color: var(--color-brand);
-            stroke: #111;
-        }
+    svg {
+      margin: auto;
+      stroke: ${({isDark}) => (isDark ? '#fff' : '#111')};
     }
+
+    &[aria-pressed="true"] {
+      background-color: var(--color-brand);
+      stroke: #111;
+    }
+  }
 `;

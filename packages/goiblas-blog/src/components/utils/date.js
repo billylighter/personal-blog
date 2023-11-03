@@ -2,10 +2,10 @@ import React from "react";
 import { styled } from "frontity";
 
 const monthNames = [
-    "Enero", "Febrero", "Marzo",
-    "Abril", "Mayo", "Junio",
-    "Julio", "Agosto", "Septiembre",
-    "Octubre", "Noviembre", "Diciembre"
+    "Січень", "Лютий", "Березень",
+    "Квітень", "Травень", "Червень",
+    "Липень", "Серпень", "Вересень",
+    "Жовтень", "Листопад", "Грудень"
   ];
 
 const DateFormat = ({date}) => {
@@ -17,7 +17,7 @@ const DateFormat = ({date}) => {
     const year = currentDate.getFullYear();
 
     return (
-        <Time dateTime={currentDate.toLocaleDateString('en-US')}>{day} de {month} de {year}</Time>
+        <Time dateTime={currentDate.toLocaleDateString('en-US')}>{month} {day} {year}</Time>
     );
 };
 

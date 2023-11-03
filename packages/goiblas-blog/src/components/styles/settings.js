@@ -1,9 +1,11 @@
 import { css } from "frontity";
 import ApercuBold from "./../../assets/fonts/apercu/Apercu-Bold.woff2";
 import PublicSans from "./../../assets/fonts/public-sans/Public-Sans-Roman-VF.woff2";
+import KaushanScript from "./../../assets/fonts/Kaushan_Script/Kaushan_Script.woff2";
 
 const HEADER_FONT_FAMILY = "Apercu Bold";
 const BODY_FONT_FAMILY = "Public Sans";
+const LOGO_FONT_FAMILY = "Kaushan Script";
 
 const fontFaceBody = css`
   @font-face {
@@ -24,16 +26,28 @@ const fontFaceHeader = css`
   }
 `;
 
+const fontFaceLogo = css`
+  @font-face {
+    font-family: ${LOGO_FONT_FAMILY};
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(${KaushanScript}) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    /* You can specify additional font formats (e.g., woff, woff2, eot) for better browser compatibility. */
+  }
+`;
+
 const settings = css`
   :root {
     --base: 15px;
     --scale-factor: 0.24;
     --space: 24px;
-
     --system-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     --header-family: ${HEADER_FONT_FAMILY}, var(--system-family);
     --body-family: ${BODY_FONT_FAMILY}, var(--system-family);
+    --logo-family: ${LOGO_FONT_FAMILY}, var(--system-family);
     --code-family: monospace;
 
     --color-brand: #30d2f1;
@@ -96,4 +110,4 @@ const settings = css`
     --padding-right: initial;
   }
 `;
-export default css([fontFaceHeader, fontFaceBody, settings]);
+export default css([fontFaceHeader, fontFaceBody, fontFaceLogo, settings]);

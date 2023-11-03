@@ -16,9 +16,9 @@ const Page404 = ({ state }) => {
 
   return (
     <Container>
-      <Title ref={titleEl} tabIndex="-1">Oops! 404</Title>
+      <Title ref={titleEl} tabIndex="-1">Уупс! 404</Title>
       <Description>
-        Página no encontrada{" "}
+        Оце так біда{" "}
         <span role="img" aria-label="confused face">
           😕
         </span>
@@ -39,12 +39,10 @@ const Title = styled.h1`
   margin: 0;
   margin-top: 24px;
   margin-bottom: 8px;
-  color: rgba(12, 17, 43);
   font-size: 4em;
 `;
 
 const Description = styled.div`
   line-height: 1.6em;
-  color: rgba(12, 17, 43, 0.8);
   margin: 24px 0;
 `;

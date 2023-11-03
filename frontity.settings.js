@@ -2,22 +2,23 @@ const settings = {
   name: "theme-goiblas",
   state: {
     frontity: {
-      url: "https://goiblas.com",
-      title: "Blog de Desarrollo WordPress con Javascript ⚛️",
+      url: "https://wp.blog.admin.selevertov.com",
+      site_name : "Selevertov",
+      title: "Блог на тему «Wordpress Розробка»",
       description:
-        "👋! Soy Jesús Olazagoitia, En este blog encontrarás 🔮 artículos sobre desarrollo WordPress con JavaScript, 🏗️ creación de bloques para Gutenberg, ⚛️ React y mis expericias 🤪 como desarrollador Frontend",
-      lang: "es",
+        "👋 Вітаю моє ім'я Володимир і я — Wordpress розробник.",
+      lang: "ua",
       hero: {
         content:
-          "👋 Soy Jesús Olazagoitia, escribo sobre desarrollo WordPress con JavaScript",
+          "👋 Вітаю моє ім'я Володимир і я — Wordpress розробник.",
         cta: {
-          content: "¿Quíeres saber más de mi?",
-          link: "/sobre-mi/"
+          content: "Бажаєте знати більше про мене?",
+          link: "/about-me/"
         }
       },
       author: {
-        name: "Jesús Olazagoitia",
-        link: "/sobre-mi/"
+        name: "Володимир Селевертов",
+        link: "/about-me/"
       }
     }
   },
@@ -27,9 +28,10 @@ const settings = {
       state: {
         theme: {
           menu: [
-            ["Blog", "/"],
-            ["Proyectos", "/proyectos/"],
-            ["Sobre mí", "/sobre-mi/"]
+            ["Блог", "/"],
+            ["Проекти", "/projects/"],
+            ["Про мене", "/about-me/"],
+            ["Зв'язок", "/contact-me/"]
           ]
         }
       }
@@ -38,7 +40,7 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          api: "https://horus.online/wp-json/"
+          api: "https://wp.blog.admin.selevertov.com/wp-json"
         }
       }
     },

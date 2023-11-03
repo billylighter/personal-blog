@@ -52,7 +52,7 @@ const Wrapper = styled.section`
 `;
 
 const Title = styled.h1`
-  --font-size: 4;
+  --font-size: 3;
   --margin-bottom: 2;
   --line-height: 2;
   /* max-width: 550px; */
